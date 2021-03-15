@@ -31,5 +31,6 @@ Route::get('post/create', function () {
 //     return $post;
 // });
 
-Route::get('post', [BlogController::class, 'index']);
+Route::get('blog', [BlogController::class, 'index']);
+Route::get('blog/create', [BlogController::class, 'index']);
 
