@@ -26,10 +26,10 @@ Route::get('post/create', function () {
     ]);
 });
 
-// Route::get('post', function () {
-//     $post = Post::find(1);
-//     return $post;
-// });
+Route::get('post', function () {
+    $post = Post::find(2);
+    return $post;
+});
 
 Route::get('blog/index', [BlogController::class, 'index']);
 Route::get('blog/create', function(){
