@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\DB;
 use App\Models\Post;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\SendEmailController;
+use Illuminate\Support\Facades\Mail;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -42,7 +44,4 @@ Route::get('post/{id}', [BlogController::class, 'get_post']);
 
 Route::resource('forms', 'App\Http\Controllers\FormController');
 
-// Route::get('forms/create', function(){
-//     return view('forms.create');
-// });
-// Route::post('forms/create', [FormController::class, 'store']);
+Route::get('mail/send', 'App\Http\Controllers\MailController@send');
